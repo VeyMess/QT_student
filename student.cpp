@@ -4,12 +4,12 @@ Student::Student(int _age, QString _name, QString _lastName)
     : age(_age), name(_name), lastName(_lastName)
 {}
 
-QString Student::getName()
+const QString& Student::getName()
 {
     return this->name;
 }
 
-QString Student::getLastName()
+const QString& Student::getLastName()
 {
     return this->lastName;
 }

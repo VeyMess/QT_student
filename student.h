@@ -12,8 +12,8 @@ private:
 public:
     Student(int, QString, QString);
 
-    QString getName();
-    QString getLastName();
+    const QString& getName();
+    const QString& getLastName();
 };
 
 #endif // STUDENT_H
