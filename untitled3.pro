@@ -13,8 +13,7 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
         quarteldate.cpp \
-        student.cpp \
-        studentviewlist.cpp
+        student.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -25,9 +24,7 @@ HEADERS += \
     descipline.h \
     mainwindow.h \
     quarteldate.h \
-    student.h \
-    studentviewlist.h
+    student.h
 
 FORMS += \
-    mainwindow.ui \
-    studentviewlist.ui
+    mainwindow.ui
