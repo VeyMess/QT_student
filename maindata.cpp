@@ -10,6 +10,8 @@ MainData::MainData()
     instance = this;
 }
 
+MainData* MainData::instance = nullptr;
+
 bool MainData::mainLoader()
 {
     //Заглушка

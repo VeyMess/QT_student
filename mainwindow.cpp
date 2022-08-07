@@ -8,9 +8,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    lst = findChild<QListWidget*>("studentList");
-    if(lst!=nullptr)
-        qDebug()<<"Child Found!!!";
 }
 
 MainWindow::~MainWindow()
@@ -20,12 +17,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::addListItem()
 {
-    int rng = std::rand();
-    char nm = (rng*8) % 255;
-    char ln = (rng*24) % 255;
-
-    Student tmp(rng,QString("N-") + nm, QString("LN-") + ln);
-    studs.push_back(tmp);
-    lst->addItem(tmp.getName() + "" + tmp.getLastName());
-    qDebug() << "List Counter: " << lst->count();
+    //Заглушка кнопки добавить
+    qDebug() << "Добавить!!";
 }

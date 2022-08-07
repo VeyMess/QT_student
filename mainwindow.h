@@ -22,8 +22,6 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
-    QListWidget* lst;
-    QList <Student> studs;
 };
 
 #endif // MAINWINDOW_H

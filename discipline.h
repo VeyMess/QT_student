@@ -11,9 +11,10 @@ class Discipline
 private:
     static int disCounter;
 
-    const int id;
+    int id;
     QString name;
     QMap<int,QMap<QuartelDate,int>> gradeMap;
+
 public:
     Discipline(QString&);
     const QString& getName();

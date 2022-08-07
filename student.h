@@ -9,7 +9,7 @@ class Student
 private:
     static int studCount;
 
-    const int id;
+    int id;
     int age;
     QString name;
     QString lastName;
@@ -21,8 +21,7 @@ public:
     int getAge();
     int getId();
 
-    friend bool operator == (Student&, Student&);
-    bool operator ==(Student&);
+    friend bool operator == (const Student&, const Student&);
 };
 
 #endif // STUDENT_H

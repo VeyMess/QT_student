@@ -4,6 +4,8 @@ Student::Student(int _age ,QString _name, QString _lastName)
     : id( ++studCount), age(_age), name(_name), lastName(_lastName)
 {};
 
+int Student::studCount = 0;
+
 const QString& Student::getName()
 {
     return this->name;
@@ -23,12 +25,7 @@ int Student::getId()
     return this->id;
 }
 
-bool operator == (Student& first, Student& second)
+bool operator == (const Student& first, const Student& second)
 {
     return first.id == second.id;
-}
-
-bool Student::operator==(Student& other)
-{
-    return this->id == other.id;
 }

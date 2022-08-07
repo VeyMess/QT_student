@@ -4,6 +4,8 @@ Discipline::Discipline(QString& _name)
     : id(++disCounter), name(_name)
 {};
 
+int Discipline::disCounter = 0;
+
 const QString& Discipline::getName()
 {
     return name;
@@ -55,4 +57,3 @@ bool Discipline::changeGrade(Student& stud, QuartelDate& time, int _grade)
     gradeMap[stud.getId()][time] = _grade;
     return true;
 }
-

@@ -22,6 +22,7 @@ QString QuartelDate::qToQs(const Quart& _quar)
     case Quart::Q2 : return "Q2";
     case Quart::Q3 : return "Q3";
     case Quart::Q4 : return "Q4";
+    default: return "ERROR";
     }
 }
 
@@ -30,7 +31,13 @@ QString QuartelDate::getDate()
     return QString(getYear()) + " " + qToQs(getQuartel());
 }
 
-bool operator == (QuartelDate& other, QuartelDate& other2)
+bool operator == (const QuartelDate& other, const QuartelDate& other2)
 {
     return (other.year == other2.year) && (other.quartel == other2.quartel);
 }
+
+bool operator < (const QuartelDate& first, const QuartelDate& second)
+{
+    return first.quartel < second.quartel;
+}
+

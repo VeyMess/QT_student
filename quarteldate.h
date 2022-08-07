@@ -23,7 +23,8 @@ public:
     QString getDate();
     static QString qToQs(const Quart&);
 
-    friend bool operator == (QuartelDate&, QuartelDate&);
+    friend bool operator == (const QuartelDate&, const QuartelDate&);
+    friend bool operator < (const QuartelDate&, const QuartelDate&);
 };
 
 #endif // QUARTELDATE_H
